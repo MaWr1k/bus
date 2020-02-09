@@ -1,0 +1,547 @@
+
+@import 'lib/swiper.min'; // Swiper slider
+//$text-color: #4A4A4A;
+$text-color: #2B2B2B;
+$color: #FFD000;
+body{
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", serif;
+}
+a{
+  text-decoration: none;
+}
+.m-container{
+  max-width: 1580px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+section{
+  padding-top: 100px;
+}
+.btn-main{
+  background-color: $color;
+  border-radius: 16px;
+  color: $text-color;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+.main-title{
+  font-size: 40px;
+  padding-bottom: 90px;
+  color: $text-color;
+  font-weight: 900;
+}
+.site-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  .logo{
+    max-width: 360px;
+    img{
+      width: 100%;
+    }
+  }
+  .phones{
+    display: flex;
+    align-items: center;
+    a{
+      padding: 5px 22px;
+      color: $text-color;
+      font-size: 24px;
+      text-decoration: none;
+      position: relative;
+    }
+    a.line::after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 60%;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: #383838;
+    }
+    img{
+      margin-right: 5px;
+    }
+  }
+}
+.menu-line{
+  background-color: $color;
+  nav{
+    display: flex;
+    a{
+      padding: 20px 20px;
+      color: $text-color;
+      font-weight: bold;
+      font-size: 16px;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.main-slider{
+  height: 80vh;
+  color: white;
+  padding-top: 0;
+  >.swiper-container>.m-container{
+
+  }
+  .swiper-slide{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 10px;
+    z-index: 0;
+    height: 80vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .m-container{
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .s-route{
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    img{
+      padding: 0 25px;
+      width: 120px;
+    }
+    .price{
+      display: inline-block;
+      background-color: #FF0000;
+      padding: 10px 20px;
+      font-size: 50px;
+      margin-left: 25px;
+      span{
+        font-size: 24px;
+      }
+    }
+  }
+  .sub-title{
+    font-size: 44px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color;
+    padding: 50px 0 20px;
+  }
+  .desc{
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 50px;
+    max-width: 600px;
+  }
+  .btn-slider{
+    font-size: 30px;
+    padding: 26px 100px;
+  }
+  .swiper-pagination{
+    top: 100px;
+  }
+  .swiper-pagination-bullet{
+    width: 60px;
+    height: 4px;
+    border-radius: 10px;
+    margin-right: 40px;
+    background-color: #fff;
+    opacity: .65;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $color;
+    opacity: 1;
+  }
+  .note{
+    padding-top: 100px;
+  }
+}
+.about{
+
+}
+.about-list{
+  display: flex;
+  text-align: center;
+}
+.about-item{
+  background-color: #F4F4F4;
+  padding: 100px 50px;
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  text-align: center;
+  .item-img{
+    max-width: 140px;
+    max-height: 160px;
+    height: 100%;
+    margin: 0 auto;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+  .item-title{
+    font-size: 20px;
+    font-weight: 900;
+    color: $text-color;
+    text-transform: uppercase;
+    padding: 50px 0;
+
+  }
+  &:nth-child(2){
+    background-color: #fcfcfc;
+  }
+  .item-desc{
+    font-weight: 300;
+    max-width: 300px;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+}
+.eva{
+  background-image: url('/assets/img/eva-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  padding-top: 140px;
+  padding-bottom: 70px;
+  text-align: center;
+  &::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: $color;
+    top: 100px;
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.eva-desc{
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+}
+.price{
+  padding-bottom: 100px;
+}
+.routes-list{
+  display: flex;
+}
+.route-item{
+  position: relative;
+  width: 50%;
+  .route-direction{
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    img{
+      width: 40px;
+      margin: 0 20px;
+    }
+  }
+  .info-table{
+    font-size: 22px;
+    td{
+      padding: 10px 0;
+      &:last-child{
+        font-weight: 300;
+        padding-left: 25px;
+      }
+    }
+  }
+  &:nth-child(2n) {
+    padding-left: 100px;
+    &::after {
+
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 1px;
+      left: 0;
+      height: 130px;
+      background-color: #4A4A4A;
+
+    }
+  }
+}
+.routes-note{
+  font-weight: 300;
+  padding: 35px 0;
+}
+.map-form{
+  position: relative;
+  .form-block{
+    position: absolute;
+    background: rgba(56, 56, 56, 0.8);
+    max-width: 800px;
+    padding: 100px 70px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    form{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      label{
+        width: 100%;
+      }
+      .form-item{
+        padding-bottom: 35px;
+        width: 30%;
+      }
+      input{
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 8px;
+        height: 44px;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        outline:none;
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        &:focus,
+        &:active{
+          outline:none;
+        }
+        &::placeholder{
+          color: white;
+        }
+      }
+      .like-label{
+        color: white;
+        display: block;
+        padding-bottom: 20px;
+      }
+    }
+    .btn-main{
+      border-radius: 8px;
+      float:right;
+    }
+  }
+  .map{
+    margin-left: 200px;
+  }
+}
+
+.select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #fff;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+
+  &__current {
+    position: relative;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      & + .select-box__list {
+        opacity: 1;
+        z-index: 1;
+        // We have to set "animation-name: none;" to make the list visible (read below how it works)
+
+        animation-name: none;
+
+        .select-box__option {
+          cursor: pointer;
+        }
+      }
+
+      .select-box__icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 12px;
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+
+  &__value {
+    display: flex;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .select-box__input-text {
+      display: block;
+    }
+  }
+
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+
+    // We need to use animation with delay.
+    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
+    // This delay will not be noticed because we set "opacity" to "0".
+    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
+
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    //box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  }
+
+  &__option {
+    display: block;
+    padding: 15px;
+    color: #2B2B2B;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      //color: #fff;
+      background-color: #fbfbfb;
+    }
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+.gallery {
+  text-align: center;
+  background-color: #383838;
+  color: white;
+  .main-title{
+    color: white;
+    position: relative;
+    padding-bottom: 80px;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 70px;
+      height: 3px;
+      top: 80px;
+      border-radius: 10px;
+      background-color: $color;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .gallery-desc{
+    font-weight: 300;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+  .swiper-container{
+    padding-bottom: 160px;
+  }
+  .swiper-slide{
+    width: 31%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-container-horizontal > .swiper-scrollbar{
+    width: 60%;
+    left: 20%;
+    bottom: 100px;
+    height: 10px;
+  }
+  .swiper-scrollbar{
+    background: #4A4A4A;
+  }
+  .swiper-scrollbar-drag{
+    background: $color;
+  }
+}
+footer{
+  background-color: #000;
+  .site-info .phones a{
+    color: white;
+  }
+}
